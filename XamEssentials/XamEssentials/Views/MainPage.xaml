@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamEssentials.Views.MainPage"
+             Title="{Binding Title}">
+
+    <Grid>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0">
+            <Label HorizontalOptions="CenterAndExpand" Text="{Binding GPSLocation.Longitude, StringFormat='Longitude {0}'}" />
+            <Label HorizontalOptions="CenterAndExpand" Text="{Binding GPSLocation.Latitude, StringFormat='Latitude {0}'}" />
+            <Label HorizontalOptions="CenterAndExpand" Text="{Binding GPSLocation.Altitude, StringFormat='Altitude {0}'}" />
+            <Button Text="Get Location" Command="{Binding GetLocationCommand}"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="1">
+            <Button Text="Turn on/off light" Command="{Binding ToggleLightCommand}"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="2">
+            <Button Text="Vibrate" Command="{Binding VibrateCommand}"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
