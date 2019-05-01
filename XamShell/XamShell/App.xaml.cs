@@ -9,8 +9,9 @@ namespace XamShell
     public partial class App : Application
     {
         //TODO: Replace with *.azurewebsites.net url after deploying backend to Azure
-        public static string AzureBackendUrl = "http://localhost:5000";
-        public static bool UseMockDataStore = true;
+        //public static string AzureBackendUrl = "http://localhost:5000";
+        public static string AzureBackendUrl = "http://192.168.1.108:45455";
+        public static bool UseMockDataStore = false;
 
         public App()
         {
